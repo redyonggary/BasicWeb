@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>기초웹개발론 3주차 실습</title>
+    </head>
+    <body>
+        <h1 id="intro">2023108129 컴퓨터공학과 홍용우 입니다.</h1>
+
+        <script>
+            function intro1() {
+                return `기초웹개발론 강의를 듣고 있습니다. `;
+            }
+
+            function intro2() {
+                return `A+ 받고 싶습니다.`;
+            }
+
+            const intros = [intro1, intro2];
+            let index = 0;
+
+            setInterval(() => {
+                const message = intros[index % intros.length]();
+                document.getElementById("intro").textContent = message;
+                index++;
+            }, 3000);
+        </script>
+    </body>
+</html>
